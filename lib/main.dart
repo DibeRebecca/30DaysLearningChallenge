@@ -1,3 +1,4 @@
+import 'package:challenge/screens/signup.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -76,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
               labelText: 'Password',
             ),
           ),
-         SizedBox(height:10.0),
+         const SizedBox(height:10.0),
         Container(
           decoration: const BoxDecoration(borderRadius: BorderRadius.horizontal()),
           width: 400,
@@ -88,16 +89,19 @@ class _MyHomePageState extends State<MyHomePage> {
               foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
               backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
             ),
-                onPressed: (){},
-                child: Text('Login', style: TextStyle(fontSize: 18.0,color: Colors.white),),
+                onPressed: (){
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>const SignUp()));
+                },
+                child: const Text('Login', style: TextStyle(fontSize: 18.0,color: Colors.white),),
               ),
               ),
-              SizedBox(height:10.0),
-              Text(
+              
+              const SizedBox(height:10.0),
+              const Text(
               'Or login With',
               style: TextStyle(fontWeight: FontWeight.normal,fontSize: 13.0,color: Color.fromARGB(255, 87, 86, 86)),
             ),
-            SizedBox(height:10.0),
+            const SizedBox(height:10.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -117,7 +121,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 Container(
-                  
                   padding: EdgeInsets.all(15.0),
                   decoration: BoxDecoration(
                   border: Border.all(width: 1.0,color: Color.fromARGB(255, 151, 151, 151),),
@@ -145,13 +148,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ],),
-              SizedBox(height:20.0),
-              Text(
+              const SizedBox(height:20.0),
+              const Text(
               'New to RBK Design ? ',
               style: TextStyle(fontWeight: FontWeight.normal,fontSize: 15.0,color: Color.fromARGB(255, 87, 86, 86)),
             ),
             //SizedBox(height:10.0),
-              TextButton(onPressed: (){}, child: Text('Register',style: TextStyle(color: Colors.blue, fontSize: 16,fontWeight: FontWeight.bold),))
+              TextButton(onPressed: (){}, child: const Text('Register',style: TextStyle(color: Colors.blue, fontSize: 16,fontWeight: FontWeight.bold),))
           ],
         ),
       
