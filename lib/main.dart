@@ -62,6 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
               style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30.0,color: Colors.black),
             ),
             ],),
+            SizedBox(height: 10,),
             TextFormField(
              
             decoration: const InputDecoration(
@@ -77,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
               labelText: 'Password',
             ),
           ),
-         const SizedBox(height:10.0),
+         const SizedBox(height:30.0),
         Container(
           decoration: const BoxDecoration(borderRadius: BorderRadius.horizontal()),
           width: 400,

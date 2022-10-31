@@ -36,6 +36,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  persistent_bottom_nav_bar: any
 
 dev_dependencies:
   flutter_test:
@@ -80,7 +81,7 @@ flutter:
      fonts:
        - asset: fonts/GoogleSans-Regular.ttf
        - asset: fonts/GoogleSans-Bold.ttf
-  #         style: italic
+  #       style: bold
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

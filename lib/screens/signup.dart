@@ -1,3 +1,4 @@
+import 'package:challenge/screens/swipes.dart';
 import 'package:flutter/material.dart';
 
 class SignUp extends StatelessWidget {
@@ -100,7 +101,7 @@ class SignUp extends StatelessWidget {
               backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
             ),
                 onPressed: (){
-                  Navigator.push(context,MaterialPageRoute(builder: (context)=>const SignUp()));
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>const Swipes()));
                 },
                 child: const Text('Continue', style: TextStyle(fontSize: 20,color: Colors.white),),
               ),
