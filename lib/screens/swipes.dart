@@ -1,4 +1,5 @@
 import 'package:challenge/screens/dashboard.dart';
+import 'package:challenge/screens/wallet.dart';
 import 'package:flutter/material.dart';
 
 class Swipes extends StatefulWidget {
@@ -19,7 +20,7 @@ class _SwipesState extends State<Swipes> {
             Row(mainAxisAlignment: MainAxisAlignment.end,
               children: [
               TextButton(
-                onPressed: () { Navigator.push(context, MaterialPageRoute(builder:  (context)=>SecondSwipe())); },
+                onPressed: () { Navigator.push(context, MaterialPageRoute(builder:  (context)=>Wallet())); },
                 child: Text('Skip'))
             ],),
             SizedBox(height:50),

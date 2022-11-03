@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:challenge/screens/day5.dart';
-import 'package:challenge/screens/day4.dart';
+import 'package:challenge/screens/wallet.dart';
 import 'package:challenge/screens/day6.dart';
 import 'package:challenge/screens/day7.dart';
 
@@ -409,9 +409,7 @@ class _DashboardState extends State<Dashboard> {
             IconButton(
               enableFeedback: false,
               onPressed: () {
-                setState(() {
-                  pageIndex = 1;
-                });
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Wallet()));
               },
               icon: pageIndex == 1
                   ? const Icon(
