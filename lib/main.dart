@@ -1,3 +1,5 @@
+import 'package:challenge/screens/launch.dart';
+import 'package:challenge/screens/login.dart';
 import 'package:challenge/screens/signup.dart';
 import 'package:flutter/material.dart';
 
@@ -47,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
          // mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-           
+       
             Column(
               //mainAxisAlignment: MainAxisAlignment.start,
               children: const [
@@ -84,14 +86,15 @@ class _MyHomePageState extends State<MyHomePage> {
           width: 400,
           height: 70,
         padding: const EdgeInsets.only(top: 10.0, right:30.0, left: 30.0),
-        child : ElevatedButton(
+        child : 
+        ElevatedButton(
           style: ButtonStyle(
               //maximumSize: MaterialStateProperty<Size>,
               foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
               backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
             ),
                 onPressed: (){
-                  Navigator.push(context,MaterialPageRoute(builder: (context)=>const SignUp()));
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>const Login()));
                 },
                 child: const Text('Login', style: TextStyle(fontSize: 18.0,color: Colors.white),),
               ),
@@ -149,6 +152,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ],),
+              
               const SizedBox(height:20.0),
               const Text(
               'New to RBK Design ? ',
