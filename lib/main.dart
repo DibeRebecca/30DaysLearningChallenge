@@ -1,5 +1,7 @@
+import 'package:challenge/screens/home.dart';
 import 'package:challenge/screens/launch.dart';
 import 'package:challenge/screens/login.dart';
+import 'package:challenge/screens/password.dart';
 import 'package:challenge/screens/signup.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        fontFamily: 'GoogleSans',
+        fontFamily: 'Montserrat',
         colorSchemeSeed: const Color(0xff6750a4),
         useMaterial3: true,
         //primarySwatch: Colors.blueGrey,
@@ -94,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
               backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
             ),
                 onPressed: (){
-                  Navigator.push(context,MaterialPageRoute(builder: (context)=>const Login()));
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>const Password()));
                 },
                 child: const Text('Login', style: TextStyle(fontSize: 18.0,color: Colors.white),),
               ),

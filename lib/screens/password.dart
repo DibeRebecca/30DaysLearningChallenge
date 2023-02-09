@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 class Password extends StatefulWidget {
   const Password({super.key});
@@ -24,15 +25,22 @@ class _PasswordState extends State<Password> {
         children: [
           const SizedBox(height: 100,),
          
-         const Image(image: AssetImage("assets/images/logo_texte.png"),width: 200,),
+         const Center(child:Image(image: AssetImage("assets/images/logo.png"),width: 200,) ,) ,
+         const Center(child: Text("Baobab",style: TextStyle(fontSize: 22,fontFamily: 'Montserrat', color: Colors.green ,fontWeight: FontWeight.bold)),),
+          const SizedBox(height: 15,),
+         //const Center(child: Text("Connexion",style: TextStyle(fontSize: 25,fontFamily: 'Montserrat', color: Colors.black ,fontWeight: FontWeight.bold)),),
+
          Row(
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: const[
+            children:const [
+              
               SizedBox(height: 50,),
-              Text("Veuillez changer votre Mot de passe ", style: TextStyle(fontSize: 18, color: Colors.green, fontWeight: FontWeight.bold),)
+              AutoSizeText("Veuillez changer votre Mot de passe ",style:  TextStyle(fontSize: 18, color: Colors.black, fontWeight: FontWeight.normal), 
+              maxLines: 2,
+              )
           ],),
-         const SizedBox(height: 100,),
+         const SizedBox(height: 70,),
            TextFormField(
             obscureText: true,
             decoration: const InputDecoration(
@@ -42,6 +50,7 @@ class _PasswordState extends State<Password> {
               suffixIcon: Icon(CupertinoIcons.eye),
             ),
           ),
+          const SizedBox(height: 15,),
           TextFormField(
             obscureText: true,
             decoration: const InputDecoration(
@@ -54,8 +63,8 @@ class _PasswordState extends State<Password> {
           const SizedBox(height: 50,),
           SizedBox(
             child: Container(
-              width: 500, height: 65,
-              decoration: BoxDecoration(color: Colors.green),
+              width: 500, height: 55,
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(7),color: Colors.green),
             child: ElevatedButton(
           child: Text('Valider',style: TextStyle(fontSize: 18, color: Colors.white),),
           style: ElevatedButton.styleFrom(
@@ -73,7 +82,6 @@ class _PasswordState extends State<Password> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: const[
               SizedBox(height: 50,),
-              Text("Mot de passe oublié ?", style: TextStyle(fontSize: 18, color: Colors.green, fontWeight: FontWeight.bold),)
           ],),
         ],
       ),

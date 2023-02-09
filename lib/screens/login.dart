@@ -24,8 +24,12 @@ class _LoginState extends State<Login> {
         children: [
           const SizedBox(height: 100,),
          
-         const Image(image: AssetImage("assets/images/logo_texte.png"),width: 200,),
-         const SizedBox(height: 100,),
+         const Center(child:Image(image: AssetImage("assets/images/logo.png"),width: 200,) ,) ,
+         const Center(child: Text("Baobab",style: TextStyle(fontSize: 22,fontFamily: 'Montserrat', color: Colors.green ,fontWeight: FontWeight.bold)),),
+          const SizedBox(height: 15,),
+         //const Center(child: Text("Connexion",style: TextStyle(fontSize: 25,fontFamily: 'Montserrat', color: Colors.black ,fontWeight: FontWeight.bold)),),
+
+         const SizedBox(height: 40,),
            TextFormField(
              
             decoration: const InputDecoration(
@@ -34,6 +38,7 @@ class _LoginState extends State<Login> {
               labelText: 'Identifiant',
             ),
           ),
+          const SizedBox(height: 15,),
           TextFormField(
             obscureText: true,
             decoration: const InputDecoration(
@@ -43,11 +48,13 @@ class _LoginState extends State<Login> {
               suffixIcon: Icon(CupertinoIcons.eye),
             ),
           ),
-          const SizedBox(height: 50,),
+          const SizedBox(height: 75,),
           SizedBox(
             child: Container(
-              width: 500, height: 65,
-              decoration: BoxDecoration(color: Colors.green),
+              width: 500, height: 50,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(7),
+                color: Colors.green),
             child: ElevatedButton(
           child: Text('Connexion',style: TextStyle(fontSize: 18, color: Colors.white),),
           style: ElevatedButton.styleFrom(
@@ -64,8 +71,8 @@ class _LoginState extends State<Login> {
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: const[
-              SizedBox(height: 50,),
-              Text("Mot de passe oublié ?", style: TextStyle(fontSize: 18, color: Colors.green, fontWeight: FontWeight.bold),)
+              SizedBox(height: 70,),
+              Text("Mot de passe oublié ?", style: TextStyle(fontSize: 16, color: Colors.black),)
           ],)
         ],
       ),

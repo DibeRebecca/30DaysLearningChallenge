@@ -10,32 +10,18 @@ class Launch extends StatelessWidget {
       body: SingleChildScrollView(child:Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          SizedBox(height: 250,),
-          DefaultTextStyle(
-            style: const  TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.green),
-            child: AnimatedTextKit(
-              animatedTexts: [
-                ScaleAnimatedText('Baobab'),
-              ],
-              totalRepeatCount: 4,
-              pause: const Duration(milliseconds: 1000),
-              displayFullTextOnTap: true,
-              stopPauseOnTap: true,
-              onTap: () {
-                print("Tap Event");
-              },
-            ),
-  ),
-          //const Center(child: Text("Baobab",),),
-           const Center(
+        children:const [
+          SizedBox(height: 350,),
+         
+           Center(child: Text("Baobab",style: TextStyle(fontSize: 22,fontFamily: 'Montserrat', color: Colors.green ,fontWeight: FontWeight.bold)),),
+            Center(
             child: Text("Plateforme d'informations de",style: TextStyle(fontSize: 18,color: Colors.green),),
           ),
-          const Center(
+           Center(
             child: Text("l'Université de Lomé",style: TextStyle(fontSize: 18,color: Colors.green),),
           ),
-          const SizedBox(height: 350,),
-          const Image(image: AssetImage('assets/images/logo-ul.png',),width: 250,)
+           SizedBox(height: 300,),
+           Image(image: AssetImage('assets/images/logo-ul.png',),width: 200,)
         ],
       ) ,) 
     );
