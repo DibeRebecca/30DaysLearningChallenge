@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-
+ 
 class Defaults {
   static final Color drawerItemColor = Colors.black;
   static final Color drawerItemSelectedColor = Colors.white;
-  static final Color drawerSelectedTileColor = Color.fromARGB(255, 156, 156, 156);
+  static final Color drawerSelectedTileColor = Colors.green;
 
   static final drawerItemText = [
     'Université de Lomé',

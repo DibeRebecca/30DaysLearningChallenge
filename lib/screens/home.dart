@@ -51,8 +51,9 @@ class _HomeState extends State<Home> {
           backgroundColor: Colors.green,
 
       ),
+      
       drawer: Drawer(
-        backgroundColor: Color.fromARGB(255, 214, 214, 214),
+        backgroundColor: Color.fromARGB(255, 243, 239, 239),
         
       child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -63,7 +64,7 @@ class _HomeState extends State<Home> {
            DrawerHeader(
             decoration: const BoxDecoration(
               
-              color: Color.fromARGB(255, 214, 214, 214),
+              color: Color.fromARGB(255, 243, 239, 239),
             ),
             child: Container(
               //height: 500,
@@ -90,6 +91,7 @@ class _HomeState extends State<Home> {
                      SizedBox(
                       height: 5,
                     ),
+                    
                    /* Text(
                       'john@rambo.com',
                       style: TextStyle(
@@ -105,6 +107,25 @@ class _HomeState extends State<Home> {
           Expanded(child: ListView(
             padding: EdgeInsets.zero,
             children: [
+              SizedBox(height: 5,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: const [
+                   Text("Benjamin AMOUZOU", style:TextStyle(color: Colors.blue)),    
+                ],
+              ),
+              ListTile(
+                horizontalTitleGap: 1,
+                  leading: const Icon(
+                    Icons.exit_to_app,
+                    color: Colors.red,
+                  ),
+                  title: const Text('Deconnexion'),
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                ),
               ListTile(
             
             title: const Text('Mes groupes'),
@@ -142,20 +163,10 @@ class _HomeState extends State<Home> {
                   const SizedBox(
                     height: 30,
                   ),
-                  const AppDrawerDivider(),
                   
             ],
           )),
-          ListTile(
-            leading: const Icon(
-              Icons.exit_to_app,
-              color: Colors.red,
-            ),
-            title: const Text('Deconnexion'),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
+          
         ],
       ),
     ),
@@ -196,6 +207,7 @@ class AppDrawerTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
       child: ListTile(
+        horizontalTitleGap: 1,
         onTap: onTap(),
         selected: indexClicked == index,
         selectedTileColor: Defaults.drawerSelectedTileColor,
@@ -209,7 +221,7 @@ class AppDrawerTile extends StatelessWidget {
         title: Text(
           Defaults.drawerItemText[index],
           style: TextStyle(
-            fontSize: 17,
+            fontSize: 15,
             fontWeight: FontWeight.w500,
             color: indexClicked == index
                 ? Defaults.drawerItemSelectedColor

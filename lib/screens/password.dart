@@ -36,7 +36,7 @@ class _PasswordState extends State<Password> {
             children:const [
               
               SizedBox(height: 50,),
-              AutoSizeText("Veuillez changer votre Mot de passe ",style:  TextStyle(fontSize: 18, color: Colors.black, fontWeight: FontWeight.normal), 
+              AutoSizeText("Veillez changer votre mot de passe ",style:  TextStyle(fontSize: 18, color: Colors.black, fontWeight: FontWeight.normal), 
               maxLines: 2,
               )
           ],),

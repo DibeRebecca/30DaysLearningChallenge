@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
               backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
             ),
                 onPressed: (){
-                  Navigator.push(context,MaterialPageRoute(builder: (context)=>const Password()));
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>const Home()));
                 },
                 child: const Text('Login', style: TextStyle(fontSize: 18.0,color: Colors.white),),
               ),
